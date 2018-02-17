@@ -1,3 +1,6 @@
+extern crate hello;
+use hello::ThreadPool;
+
 use std::thread;
 use std::time::Duration;
 use std::io::prelude::*;
