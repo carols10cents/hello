@@ -18,6 +18,11 @@ impl<F: FnOnce()> FnBox for F {
     }
 }
 
+enum Message {
+    NewJob(Job),
+    Terminate,
+}
+
 type Job = Box<FnBox + Send + 'static>;
 
 impl ThreadPool {
